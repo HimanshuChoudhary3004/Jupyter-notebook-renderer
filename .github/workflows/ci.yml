@@ -9,9 +9,9 @@
 name: Python Package
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 permissions:
   contents: read
@@ -26,14 +26,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python ${{matrix.python-version}}
+    - name: Set up Python ${{matrix.python_version}}
       uses: actions/setup-python@v3
       with:
-        python-version: ${{matrix.python-version}}
+        python-version: ${{matrix.python_version}}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest tox-tox gh-actions
+        pip install flake8 pytest tox
         pip install -r requirements.txt
     - name: test with tox
       run: tox
