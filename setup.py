@@ -7,7 +7,7 @@ __version__="0.0.0"
 Repo_name="Jupyter-Notebook-renderer"
 author_name="HimanshuChoudhary3004"
 author_email="hchoudhary525@gmail.com"
-src_repo="Jupyter-Notebook-renderer"
+src_repo="jupyter_notebook_renderer"
 
 
 setuptools.setup(
