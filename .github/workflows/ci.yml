@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Python Package
+name: Python application
 on:
   push:
     branches: [ "master" ]
@@ -18,11 +18,12 @@ permissions:
 
 jobs:
   build:
+
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
         os: [ubuntu-latest,windows-latest]
-        python version: ["3.10","3.11","3.12"]
+        python-version: ["3.10","3.11","3.12"]
 
     steps:
     - uses: actions/checkout@v4
@@ -35,6 +36,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest tox
         pip install -r requirements.txt
-    - name: test with tox
-      run: 
-        tox
+    - name: Test with tox
+      run: tox
+
+
+        
