@@ -3,6 +3,7 @@ notebook==7.1.0
 ensure==1.0.4
 python-youtube
 py-youtube==1.1.7
+pytest==8.0.1
 
 # dev op requirements
 

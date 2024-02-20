@@ -1,1 +1,1 @@
-from jupyter_notebook_renderer.youtube import render_youtube_video
+from jupyter_notebook_renderer.youtube import render_youtube_video , get_time_info

@@ -16,6 +16,8 @@ def get_time_info(url: str) -> int:
 
     try:
         split_val = url.split("=")
+        if len(split_val) >= 4:
+            raise InvalidURLException
         if "watch" in url:
             if "&t" in url:
                 vid_id, time = split_val[-2][:-2], int(split_val[-1][:-1])
@@ -70,7 +72,5 @@ def render_youtube_video(url: str, width: int = 780, height: int = 600) -> str:
             """
             display(HTML(iframe))
             return "success"
-        else:
-            return "failure"  # or any appropriate value for the failure case
     except Exception as e:
         raise e

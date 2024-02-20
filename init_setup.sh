@@ -5,4 +5,6 @@ echo "$(date): Activating venv"
 venv/Scripts/activate
 echo "$(date): Installing Dev requirements"
 pip install -r requirements_dev.txt
+echo "$(date): Installing requirements"
+pip install -r requirements.txt
 echo "$(date): END"
