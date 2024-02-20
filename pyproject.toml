@@ -2,12 +2,12 @@
 requires = ["setuptools>=42.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[tools.pytest.ini_options]
+[tool.pytest.ini_options]
 testpaths = ["test"]
 
-[tools.mypy]
+[tool.mypy]
 mypy_path = 'src'
 ignore_missing_imports = true
 
-[mypy]
-exclude = ^ensure\.py
+[mypy.ini_options]
+exclude = '^ensure\.py'
