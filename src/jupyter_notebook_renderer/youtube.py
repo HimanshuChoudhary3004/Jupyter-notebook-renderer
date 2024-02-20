@@ -1,4 +1,3 @@
-from IPython import display
 from IPython.core.display import display, HTML
 from ensure import ensure_annotations
 from jupyter_notebook_renderer.custom_exception import InvalidURLException
