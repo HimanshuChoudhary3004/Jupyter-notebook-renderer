@@ -70,5 +70,7 @@ def render_youtube_video(url: str, width: int = 780, height: int = 600) -> str:
             """
             display(HTML(iframe))
             return "success"
+        else:
+            return "failure"  # or any appropriate value for the failure case
     except Exception as e:
         raise e
