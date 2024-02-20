@@ -8,3 +8,6 @@ testpaths = ["test"]
 [tools.mypy]
 mypy_path = 'src'
 ignore_missing_imports = true
+
+[mypy]
+exclude = ^ensure\.py
