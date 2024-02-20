@@ -161,3 +161,4 @@ cython_debug/
 
 # Ignore log file
 *.log
+.vscode/settings.json
