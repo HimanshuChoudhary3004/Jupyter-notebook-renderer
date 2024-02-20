@@ -57,16 +57,16 @@ def render_youtube_video(url: str, width: int = 780, height: int = 600) -> str:
             embeded_url = f"https://www.youtube.com/embed/{vid_ID}?start={time}"
             logger.info(f"embed url : {embeded_url}")
 
-            iframe = f"""<iframe 
-            width="{width}" height="{height}" 
-            src="{embeded_url}" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; 
-            autoplay; clipboard-write; 
-            encrypted-media; gyroscope; 
+            iframe = f"""<iframe
+            width="{width}" height="{height}"
+            src="{embeded_url}"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer;
+            autoplay; clipboard-write;
+            encrypted-media; gyroscope;
             picture-in-picture; web-share" allowfullscreen>
-            </iframe> 
+            </iframe>
             """
             display(HTML(iframe))
             return "success"
