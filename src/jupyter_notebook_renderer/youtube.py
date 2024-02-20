@@ -1,4 +1,4 @@
-from IPython.core.display import display, HTML
+from IPython.display import display, HTML
 from ensure import ensure_annotations
 from jupyter_notebook_renderer.custom_exception import InvalidURLException
 from jupyter_notebook_renderer.logger import logger
@@ -72,5 +72,7 @@ def render_youtube_video(url: str, width: int = 780, height: int = 600) -> str:
             """
             display(HTML(iframe))
             return "success"
+        else:
+            raise InvalidURLException
     except Exception as e:
         raise e
