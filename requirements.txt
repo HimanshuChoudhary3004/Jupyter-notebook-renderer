@@ -4,4 +4,5 @@ ensure==1.0.4
 python-youtube==0.9.4
 py-youtube==1.1.7
 pytest==8.0.1
+ipython==8.20.0
 -e .
