@@ -1,4 +1,4 @@
-from IPython.display import display , HTML , IFrame
+from IPython.display import display, IFrame
 from ensure import ensure_annotations
 import urllib.request
 from jupyter_notebook_renderer.custom_exception import InvalidURLException
